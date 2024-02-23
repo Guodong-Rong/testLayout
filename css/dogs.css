@@ -75,15 +75,20 @@ footer {
 }
 
 aside {
-    width: 20%; /* Set the width */
+    /* width: 20%; */
     background-color: #f2f2f2;
     float: right;
     padding: 20px;
 }
-
+.aside {
+    width: 200px; /* Adjust the percentage as needed */
+}
 .main-content {
-    width: 80%;
+    /* width: 80%; */
     flex: 1;
+}
+.menu-toggle {
+    display: none;
 }
 
 .grid-container {
@@ -96,9 +101,9 @@ aside {
 }
 
 .grid-item {
-    width: 300px;
-    height: 300px;
-    background-color: #fff; /* Optionally, set a background color for grid items */
+    /* width: 500px;
+    height: 500px; */
+    background-color: lightgrey; /* Optionally, set a background color for grid items */
     padding: 10px;
     text-align: center;
     overflow: hidden; /* Hide overflow content */
@@ -109,8 +114,8 @@ aside {
 }
   
 .grid-item img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -181,5 +186,34 @@ aside {
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr); /* 1 column for screens <= 768px */
+    }
+    .grid-item {
+        width: 500px;
+    }
+    nav ul {
+        display: none; /* Hide the navigation list by default on small screens */
+    }
+    nav ul.show {
+        display: block; /* Show the navigation list when the show class is applied */
+    }
+    .menu-toggle {
+        display: flex; /* Display the menu toggle on smaller screens */
+        flex-direction: column; /* Arrange the lines in a column */
+        justify-content: center; /* Align items vertically to the center */
+        align-items: center; /* Align items horizontally to the center */
+        cursor: pointer; /* Add cursor pointer for better UX */
+        position: fixed; /* Position the toggle button */
+        top: 10px; /* Adjust the top position as needed */
+        right: 10px; /* Adjust the right position as needed */
+        z-index: 999; /* Ensure the toggle button is above other content */
+    }
+
+    .menu-toggle span {
+        background-color: red; /* Color of the lines in the hamburger icon */
+        display: block;
+        height: 3px; /* Height of each line */
+        margin-bottom: 5px; /* Spacing between lines */
+        transition: transform 0.3s ease; /* Add transition effect */
+        width: 25px; /* Width of each line */
     }
 }

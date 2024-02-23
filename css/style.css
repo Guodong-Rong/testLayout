@@ -75,16 +75,22 @@ footer {
 }
 
 aside {
-    width: 20%;
-    /* Set the width */
     background-color: #f2f2f2;
     float: right;
     padding: 20px;
 }
 
+.aside {
+    width: 200px; /* Adjust the percentage as needed */
+}
+
 .main-content {
     width: 80%;
     flex: 1;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -153,4 +159,31 @@ aside {
         display: none;
         /* Hide the aside */
     }
+    nav ul {
+        display: none; /* Hide the navigation list by default on small screens */
+    }
+    nav ul.show {
+        display: block; /* Show the navigation list when the show class is applied */
+    }
+    .menu-toggle {
+        display: flex; /* Display the menu toggle on smaller screens */
+        flex-direction: column; /* Arrange the lines in a column */
+        justify-content: center; /* Align items vertically to the center */
+        align-items: center; /* Align items horizontally to the center */
+        cursor: pointer; /* Add cursor pointer for better UX */
+        position: fixed; /* Position the toggle button */
+        top: 10px; /* Adjust the top position as needed */
+        right: 10px; /* Adjust the right position as needed */
+        z-index: 999; /* Ensure the toggle button is above other content */
+    }
+
+    .menu-toggle span {
+        background-color: red; /* Color of the lines in the hamburger icon */
+        display: block;
+        height: 3px; /* Height of each line */
+        margin-bottom: 5px; /* Spacing between lines */
+        transition: transform 0.3s ease; /* Add transition effect */
+        width: 25px; /* Width of each line */
+    }
+    
 }
