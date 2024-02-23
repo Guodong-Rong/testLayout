@@ -93,8 +93,11 @@ aside {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr; 
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: 10% 20% 60%;
+    /* grid-auto-rows: 1fr;  */
+    grid-template-rows: 300px 600px 1200px;
     grid-gap: 10px;
     margin: auto; /* Center the grid */
     height: 100%; /* Ensure grid container takes full height of its parent */
