@@ -136,6 +136,7 @@ aside {
         width: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     ul {
@@ -205,9 +206,9 @@ aside {
         justify-content: center; /* Align items vertically to the center */
         align-items: center; /* Align items horizontally to the center */
         cursor: pointer; /* Add cursor pointer for better UX */
-        position: fixed; /* Position the toggle button */
+        position: absolute; /* Position the toggle button */
         top: 10px; /* Adjust the top position as needed */
-        right: 10px; /* Adjust the right position as needed */
+        right: 30px; /* Adjust the right position as needed */
         z-index: 999; /* Ensure the toggle button is above other content */
     }
 
