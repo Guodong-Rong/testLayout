@@ -30,6 +30,11 @@ a {
     color: #fff;
 }
 
+nav ul li a:hover {
+    color: lightslategray; /* Change to your desired background color */
+}
+
+
 .search-box {
     display: flex;
 }
