@@ -39,7 +39,7 @@ nav ul li a:hover {
     display: flex;
 }
 
-input[type="text"] {
+input[type="text"]{
     padding: 5px;
     margin-right: 10px;
     border: 1px solid #ccc;

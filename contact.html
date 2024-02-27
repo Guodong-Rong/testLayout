@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
   </head>
   <body>
     <nav>
@@ -25,35 +26,70 @@
       </div>
     </nav>
     <div class="content">
-        <div class="main-content">
-            <form action="" method="POST" class="contact-form">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject"><br>
-                
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="8" required></textarea><br>
-                
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        <div class="aside">
-            <aside >
-                <h2>Aside Area</h2>
-                <p>This is the aside area that covers some space of the screen.</p>
-            </aside>
-        </div>
-        
+      <div class="main-content">
+        <form novalidate class="contact-form" action="" method="">
+          <table>
+            <tr>
+              <td><label for="firstName">First name:</label></td>
+              <td>
+                <input type="text" id="firstName" /><label
+                  style="color: red"
+                  id="errorFirstName"
+                  >*</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="surname">Surname:</label></td>
+              <td>
+                <input type="text" id="surname" /><label
+                  style="color: red"
+                  id="errorSurname"
+                  >*</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email">Email address:</label></td>
+              <td>
+                <input type="email" id="email" /><label
+                  style="color: red"
+                  id="errorEmail"
+                  >*</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="message">Message:</label></td>
+              <td>
+                <textarea id="message" rows="4"></textarea><label
+                style="color: red"
+                id="errorMessage"
+                >*</label
+              >
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button id="submit" onclick="return validateUserData()">
+                  Send
+                </button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="aside">
+        <aside>
+          <h2>Aside Area</h2>
+          <p>This is the aside area that covers some space of the screen.</p>
+        </aside>
+      </div>
     </div>
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Gradon Rong. All rights reserved.</p>
-        </div>
+      <div class="footer-content">
+        <p>&copy; 2024 Gradon Rong. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
